@@ -1,0 +1,21 @@
+Crear nueva ruta /var/www/html/NuevoProyecto
+
+Instalar el ftpServer con sudo apt install vsftpd
+Modificar el archivo /etc/vsftpd.conf y anonimous en no y local en yes
+
+Modificar en /etc/apache2/hosts y añadir los distintos ip's y su url
+hacer una copia del archivo 000-default.conf con el nombre del proyecto
+
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/mynewsite.conf
+
+	modificar el ServerName con la url que se dese
+	modificar el DocumentRoot con la ruta del index
+	
+	sudo a2ensite mynewsite
+	sudo systemctl restart apache2.service
+
+	
+Subir el archivo del ordenador al MV con los comandos ftp
+
+
+Subir los archivos a GitHub
