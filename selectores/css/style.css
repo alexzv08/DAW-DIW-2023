@@ -1,1 +1,27 @@
+table{
+    border-collapse: collapse;
+    
+
+}
+tr:nth-child(even){
+   background-color:  #FFFFCC;
+}
+.cabecera{
+	background-image:url(../imagenes/fondo_gris.gif);
+    
+}
+table tr td{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items:center;
+        border: 1px solid #333;
+        padding: 10px;
+
+}
+.monedas{
+    background-color:  #E6F3FF;
+}
+.yellow:hover{
+    background-color: #FFFF66;
+}
 
