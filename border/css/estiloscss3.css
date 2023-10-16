@@ -1,0 +1,39 @@
+body {text-align: center; }
+.principal  {
+      display: block;
+      width: 550px;
+      margin: 50px auto;
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #999999;
+      background: #DDDDDD;
+}
+#titulo { font: bold 36px verdana, sans-serif; }
+
+.second{
+      border-radius: 20px;
+}
+.tercero{
+      border-radius: 20px 10px 30px 50px;
+      background: linear-gradient(30deg, #FFFFFF 50%, #006699 90%);
+}
+.cuarto{
+      background: none;
+      border: 50px;
+      border-style:solid;
+      border-image-source: url("../recursos/fo_bola_100.png");
+}
+.quinto{
+      background: none;
+      border: 27px;
+      border-style:solid;
+      border-image-source: url("../recursos/fo_pastilla_60.png");
+      border-image-slice: 27;
+}
+.sexto{
+      background: none;
+      border-width: 50px 80px 20px 80px;
+      border-style:solid;
+      border-image-source: url("../recursos/fo_ventana.png");
+      border-image-slice: 40 80 20 80;
+}
