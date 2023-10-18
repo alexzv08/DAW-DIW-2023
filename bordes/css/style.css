@@ -39,13 +39,12 @@ p{
     font-size: 20px;
     width: 200px;
     text-align: center;
-    margin-bottom: auto auto 20px auto;
+    margin: auto auto 20px auto;
     padding: 25px 50px;
 }
 .caja2 {
     font-size: 20px;
     width: 80%;
-    text-align: center;
     margin: auto auto 20px auto;
     padding: 25px 50px;
 }
