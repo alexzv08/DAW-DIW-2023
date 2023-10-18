@@ -14,10 +14,6 @@ body{
     height: 900px;
 
 }
-.bloque{
-    margin: auto 100px auto 85px;
-    padding: auto 50px;
-}
 .titulo{
     margin: auto;
     width: 90%;
@@ -28,9 +24,6 @@ span{
     font-size: 30px;
     border-bottom:1px solid cadetblue ;
     padding-bottom: 30px;
-    width: 100%;
-    margin: auto 180;
-    text-align: center;
 }
 p{
     margin-left: 10%;
@@ -38,23 +31,19 @@ p{
 .container{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 700px;
-    margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
 }
 .caja{
     font-size: 20px;
-    font-weight: bold;
     width: 200px;
     text-align: center;
-    margin: auto auto 20px auto;
+    margin-bottom: auto auto 20px auto;
     padding: 25px 50px;
 }
 .caja2 {
     font-size: 20px;
-    font-weight: bold;
     width: 80%;
     text-align: center;
     margin: auto auto 20px auto;
