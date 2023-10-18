@@ -4,13 +4,14 @@
 }
 body{
     background-color: rgb(43, 117, 117);
+    font-weight: bold;
 
 }
 .ejercicio{
     background-color: white;
-    margin: 50px auto;
+    margin: 30px auto;
     width: 60%;
-    height: 820px;
+    height: 900px;
 
 }
 .bloque{
@@ -19,7 +20,7 @@ body{
 }
 .titulo{
     margin: auto;
-    width: 70%;
+    width: 90%;
     padding: 40px;
     text-align: center;
 }
@@ -44,6 +45,8 @@ p{
     margin-right: auto;
 }
 .caja{
+    font-size: 20px;
+    font-weight: bold;
     width: 200px;
     text-align: center;
     margin: auto auto 20px auto;
@@ -51,6 +54,7 @@ p{
 }
 .caja2 {
     font-size: 20px;
+    font-weight: bold;
     width: 80%;
     text-align: center;
     margin: auto auto 20px auto;
@@ -97,4 +101,17 @@ p{
     border-radius: 50px;
     border: 1px solid black;
     background: linear-gradient(90deg, rgb(255, 255, 255) 0%,  rgb(13, 175, 175) 100%);
+}
+
+.fotter{
+    width: 80%;
+    font-size: 15px;
+    text-align: center;
+    margin: auto;
+    border-top:1px solid cadetblue ;
+    padding-top: 10px;
+}
+.fotter p{
+    text-align: center;
+    margin: 0;
 }
