@@ -1,0 +1,13 @@
+#martillo {
+    position:relative;
+    width:110px;
+    height:190px;
+    padding:16px;
+    border:1px dotted gray;
+    border-radius:9px;
+    float:left;
+}
+#martillo:hover{ 
+    transform: rotate(90deg); 
+    transition: 0.3s ;    
+}
