@@ -41,7 +41,8 @@ ul:first-child{
     color:white;
 }
 .menu:hover > .submenu li{
-    height: 100px;
+    height: 50px;
     overflow: visible;
     display: block;
+    justify-content: center;
 }
