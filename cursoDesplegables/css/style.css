@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier Prime', monospace;
+}
+body{
+    background: linear-gradient(340deg, #FFFFFF 0%, #cf4610 100%);
+}
+/*Contenedor general de la prueb, Uso el margin para posicionarlo en el centro y separa el continido del top de la pagina */
+main{
+    width: 60%;
+    height: 900px;
+    margin: 25px auto;
+    box-shadow: 11px 18px 10px -3px rgba(0,0,0,0.81);
+}
+/* Etiqueta header con los distintos estilos generales, para posicionar los elementos darle tamaño y color */
+header {
+    background: linear-gradient(180deg, #0c9fb3 0%, #1ec4da 100%);
+    height: 80px;
+    border-radius: 20px 20px 0 0;
+    text-align: left;
+    font-size: 1.5em;
+    color: white;
+    border-bottom: 10px solid black;
+    margin-left: 0;
+    justify-content: center;
+
+}
+/* Dando estilo al h1 tambien insertando una imagen y posicionandola */
+header h1{
+    padding: 10px 100px;
+    color: white;
+    position: relative;
+}
+header img{
+    position: absolute;
+    left: 15px;
+}
+/*Clase general de la barra de navegación, posicionamiento de los contenidos en su interior
+Utilizcion del flex para posicionar los elemntos uno al lado del otro, de forma responsive
+Justify-content para separar los elementos entre si y que se ajusten de forma responsive*/
+nav{
+    height: 150px;
+    background: linear-gradient(180deg, #faea10 70%, #b1a508 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*Contenedor de cada boton e imagen, posicionando los elementos*/
+nav .nav_bar{
+    margin: auto;
+    padding-top: 20px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*Ajustando el tamaño y posicionanmiento de la imagen del nav*/
+nav .nav_bar img{
+    width: 50px;
+    margin: auto;
+}
+/*Dando los elementos de stilo a los botones del nav*/
+nav .nav_bar .content{
+    height: 500px;
+    text-decoration: none;
+    padding: 20px 0;
+    font-size: 20px;
+    color: rgb(131, 131, 131);
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+nav .nav_bar .content:hover{
+    color: rgb(131, 131, 131);
+    text-shadow: 2px 2px 0px red;
+    transition: 0.5s;
+}
+/*Tamaño y posicionamiento de la seccion general del contenido de la imagen*/
+section{
+    height: 600px;
+    background: white;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section .box_article{
+    position: relative;
+    width: 260px;
+    height: 500px;
+    margin: auto;
+    border-style:solid;
+    border-image-source: url("../imgs/movil.png");
+    border-width: 70px 10px 70px 10px;
+    border-image-slice: 70 20 60 20;
+}
+section .box_article:nth-child(1){
+    transform: rotate(-2deg);
+}
+section .box_article:nth-child(3){
+    transform: rotate(2deg);
+}
+.chincheta{
+    background-image: url("../imgs/chincheta.png");
+    position: absolute;
+    width: 35px;
+    height: 49px;
+    top: -91px;
+}
+section .box_article > .chincheta{
+    left: 199px;
+}
+section .box_article:nth-child(2) > .chincheta{
+    left: 120px;
+}
+section .box_article:last-child > .chincheta{
+    left: 30px;
+}
+section .box_article h2{
+    text-align: center;
+    padding: 10px 0;
+    text-shadow: 4px 3px 2px rgba(36, 36, 36, 0.623);
+}
+section .box_article p{
+    margin: auto;
+    font-size: 12px;
+    text-align: center;
+    width: 90%;
+}
+footer{
+    background: linear-gradient(360deg, #0c9fb3 0%, #1ec4da 100%);
+    border-top: 7px solid black;
+    border-radius: 0 0 20px 20px;
+    height: 80px;
+    text-align: center;
+    color: white;
+}
+/*Dando padding solo al primer elemento "p" del footer*/
+footer p:first-child{
+    padding-top: 20px;
+}
