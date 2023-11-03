@@ -1,0 +1,82 @@
+@font-face {
+    font-family: AcknowledgementMedium;
+    src: url(../font/Acknowledgement.otf);
+
+    font-family: LeagueGothic;
+    src: url(../font/League-Gothic/LeagueGothic-Regular.otf);
+    
+}
+form{
+    padding: 10px auto;
+    text-align: center;
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    width: 710px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    background-image: url(../img/bg-form.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+h1{
+    font-family: AcknowledgementMedium;
+    font-size: 2em;
+    padding-bottom: 20px;
+    background: url(../img/bg-formtitle-left.png) left  no-repeat,
+                      url(../img/bg-formtitle-right.png) right  no-repeat;
+    background-size: 100px auto;
+}
+form > div{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    
+}
+form div input{
+    text-align: center;
+}
+input{
+    height: 25px;
+    background: none;
+    border: none;
+    border-bottom:2px solid #888 ; 
+}
+button{
+    border: none;
+    border-radius: 5px;
+    background: radial-gradient(circle,  rgba(144,144,144,1) 0%, rgba(72,72,72,0.72) 100%);
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    font-family:  Tahoma, Geneva, sans-serif;
+    opacity: 80%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+button:hover{
+    opacity: 100%;
+    transition: 0.25s linear;
+}
+input:required{
+    background-image: url(../img/required.png);
+    background-repeat: no-repeat;
+    background-position: right ;
+}
+input:valid:focus{
+    background-image: url(../img/valid.png);
+    background-repeat: no-repeat;
+    background-position: right ;
+}
+input:invalid:focus{
+    background-image: url(../img/invalid.png);
+    background-repeat: no-repeat;
+    background-position: right ;
+}
+input:focus{
+    color: #fff;   
+    background-color: #484848;
+}
+label,button{
+    font-family: LeagueGothic;
+}
