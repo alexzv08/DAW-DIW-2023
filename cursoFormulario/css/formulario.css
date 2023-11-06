@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
+section{
+    padding: 0;
+    background-image: url(../imgs/fondoForm.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    width: 100%;
+}
+.contenedorFormulario{
+    margin: 0;
+    position: relative;
+    margin: 50px;
+    display: inline-block;
+    width: 800px;
+    padding: 20px 50px;
+    background-color: rgb(200, 200, 200, 0.7);
+    align-content: left;
+    align-items: left;
+    box-shadow: 2px 0px 8px rgb(0, 0, 0, 0.4);
+}
+.contenedorFormulario h1{
+    position: absolute;
+    top: -16px;
+    left: 490px;
+    background-color: rgb(255, 255, 255, 0.7);
+    font-family: 'Aguafina Script', cursive;
+    color: #333;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 2px #777;
+    padding: 0px 10px;
+}
+form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+.contenedorFormulario form input,textarea{ 
+    /* display: inline-block; */
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 1px 4px rgb(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 40px rgb(0, 0, 0, 0.1);
+    color: black;
+    font-weight: bold;
+    padding: 1px 45px 4px;
+    margin-bottom: 10px;
+    transition: 0.4s all ease-in;
+}
+input[type=text],input[type=email]{
+    height: 32px;
+    width: 330px;  
+}
+input[type=text]:focus,input[type=email]:focus{
+    height: 32px;
+    width: 370px;
+    box-shadow: 0px 0px 12px rgb(255, 255, 255);  
+}
+input[type=text]{
+    background-image: url(../imgs/icon-nombre.png);
+    background-repeat: no-repeat;
+    background-position: 10px  -7px;
+}
+input[type=email]{
+    background-image: url(../imgs/icon-correo.png);
+    background-repeat: no-repeat;
+    background-position:10px -7px;
+}
+input:valid:focus{
+    background-image: url(../imgs/valid.png);
+    background-repeat: no-repeat;
+    background-position: 340px ;
+}
+input:invalid:focus{
+    background-image: url(../imgs/invalid.png);
+    background-repeat: no-repeat;
+    background-position: 340px ;
+}
+input + label::after{
+    content: "*";
+}
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    width: 90%;
+    height: 150px;
+    background-image: url(../imgs/icon-mensaje.png);
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+textarea:focus{
+    box-shadow: 0px 0px 12px rgb(red, green, blue);
+}
+input[type=submit]{
+    margin: 10px 0px;
+}
