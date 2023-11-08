@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @keyframes animacionCoche
+        {
+        from { left: 0px; }
+        65% { left: 10px; }
+        to { left: 350px; }
+        }
+        @-webkit-keyframes animacionCoche
+        {
+        from { left: 0px; }
+        65% { left: 10px; }
+        to { left: 350px; }
+        }
+        @-moz-keyframes animacionCoche
+        {
+        from { left: 0px; }
+        65% { left: 10px; }
+        to { left: 350px; }
+        }
+        @-o-keyframes animacionCoche
+        {
+        from { left: 0px; }
+        65% { left: 10px; }
+        to { left: 350px; }
+        }
+    .aCoche{
+        animation-duration: 3s;
+        animation-name: animacionCoche;
+        animation-iteration-count: 1;
+
+        position: relative;
+    }
+</style>
+<script>
+    function iniciar()
+    {
+    var iniciaAnimacion=document.getElementById("iniciaAnimacion");
+    iniciaAnimacion.addEventListener("click", accIniciaAnimacion, false);
+    }
+    function accIniciaAnimacion() {
+    var coche=document.getElementById("coche");
+    coche.className = "aCoche";
+    }
+    window.addEventListener("load", iniciar, false);
+</script>
+<body>
+    <button id="iniciaAnimacion">Inicia animación</button>
+    <div id="coche"><p>coche</p></div>
+</body>
+</html>
