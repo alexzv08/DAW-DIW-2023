@@ -178,12 +178,12 @@ section .box_article{
     border-width: 70px 10px 70px 10px;
     border-image-slice: 70 20 60 20;
 }
-section .box_article:nth-child(1){
+/* section .box_article:nth-child(1){
     transform: rotate(-2deg);
 }
 section .box_article:nth-child(3){
     transform: rotate(2deg);
-}
+} */
 .chincheta{
     background-image: url("../imgs/chincheta.png");
     position: absolute;
@@ -194,12 +194,12 @@ section .box_article:nth-child(3){
 /* section .box_article > .chincheta{
     left: 199px;
 } */
-section .box_article:nth-child(2) > .chincheta{
+/* section .box_article:nth-child(2) > .chincheta{
     left: 120px;
 }
 section .box_article:last-child > .chincheta{
     left: 30px;
-}
+} */
 section .box_article h2{
     text-align: center;
     padding: 10px 0;
@@ -234,4 +234,56 @@ to { left: 199px; }
     animation-duration: 1s;
     animation-name: mueveChincheta1;
     animation-iteration-count: 1;
+    left: 199px;
+}
+@keyframes mueveChincheta2
+{
+from { left: 0px; }
+to { left: 120px; }
+}
+.chincheta2{
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-name: mueveChincheta2;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    left: 0px;
+}
+@keyframes mueveChincheta3
+{
+from { left: 0px; }
+to { left: 30px; }
+}
+.chincheta3{
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-name: mueveChincheta3;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    left: 0px;
+}
+
+@keyframes art1
+{
+from { transform: rotate(0deg) ; }
+to { transform: rotate(-2deg); }
+}
+.art1{
+    animation-duration: 1s;
+    animation-name:art1;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes art2
+{
+from { transform: rotate(0deg) ; }
+to { transform: rotate(2deg); }
+}
+.art2{
+    animation-duration: 1s;
+    animation-name:art2;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
