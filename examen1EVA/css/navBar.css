@@ -1,0 +1,103 @@
+:root {
+    --main-color: #dadada;
+    --second-color: #cc7511;
+    --contrast-color: rgb(39, 39, 39);
+  }
+/*Barra navegacion*/
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left:80%;
+}
+/*Contenedor de cada boton e imagen, posicionando los elementos*/
+nav .nav_bar{
+    margin: auto;
+    padding-top: 20px;
+    height: 150px;
+    display: flex;
+    
+}
+/*Ajustando el tamaño y posicionanmiento de la imagen del nav*/
+nav .nav_bar img{
+    width: 50px;
+    margin: auto;
+}
+/*Dando los elementos de stilo a los botones del nav*/
+nav .nav_bar .content{
+    height: 500px;
+    text-decoration: none;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--contrast-color);
+}
+nav .nav_bar .content:hover{
+    text-shadow: 2px 2px 0px  var(--second-color);
+    transition: 0.5s;
+}
+ul:first-child{
+    position: relative;
+    justify-content: space-between;
+    list-style: none;
+    display: flex;
+    padding: 20px 0px;
+    margin: 0px 80px;
+}
+.menu{
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+}
+.submenu{
+    margin-top: 25px;
+}
+.submenu li{
+    position: relative;
+    z-index: 2;
+    width: 100px;
+    text-align: center;
+    left: 50%;
+    margin-left: -50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+    animation: linear;
+    justify-content:center;
+}
+.submenu li{
+    background-color:var(--second-color);
+    color: #000;
+}
+.submenu li:nth-child(even){
+    background-color: var(--second-color);
+    color: #000;
+}
+.submenu li:hover{
+    background-color:  #f06529;
+    color: #000;
+}
+.submenu li a{
+    text-decoration: none;
+    color:white;
+}
+.menu:hover > .submenu li{
+    height: 50px;
+    overflow: visible;
+    display: block;
+    justify-content: center;
+}
+
+.nav_bar li ul li:first-child:before {
+    content:'';
+    position:absolute;
+    width:1px;
+    height:1px;
+    border:5px solid transparent;
+    border-bottom-color:  #e34c26;
+    left:50%;
+    top:-10px;
+    margin-left:-5px;
+}

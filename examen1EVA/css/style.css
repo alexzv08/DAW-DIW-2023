@@ -1,0 +1,103 @@
+:root {
+    --main-color: #c43724;
+    --main-color: rgb(13, 90, 121);
+    --main-color: #cc7511;
+  }
+  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier Prime', monospace;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    padding: 15px 10px;
+}
+header img{
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+}
+header h1{
+    font-size: 50px;
+    letter-spacing: 3px;
+    color: rgb(49, 13, 209);
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    height: 900px;
+}
+section .articleContainer{
+    width: 100%;
+    
+}
+.containerProductos{
+    display: flex;
+    flex-direction: row;
+}
+section .articleContainer .producto{
+    width: 500px;
+    height: 800px;
+
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+section .articleContainer img{
+    width: auto;
+    height: 500px;
+    padding: 10px;
+    margin: auto;
+}
+section .articleContainer p{
+    width: 400px;
+    padding: 10px;
+    margin-top: auto;
+    margin-left: 40px;
+}
+.lateralNav{
+    width:100%;
+}
+.lateralNav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: unset !important;
+}
+.lateralNav ul li{
+    margin: 0px;
+    padding: 10px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 20px auto 0;
+    padding-bottom: 20px;
+}
+footer img{
+    margin-left: 20px;
+    margin-right: 200px;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    right: 0px;;
+    width: 60%;
+}
+footer div a{
+    padding: 20px;
+
+}
