@@ -1,14 +1,23 @@
 :root {
-    --main-color: #c43724;
-    --main-color: rgb(13, 90, 121);
-    --main-color: #cc7511;
+    --main-color: #e42926;
+    --secondari-color: #092e4d;
+    --contrast-color: #4a4a4a;
+    --grey-color: #8d8d8d;
+    --white-color: #ebebeb;
   }
-  
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap');
+  /* font-family: 'Raleway', sans-serif; */
+  /* poner logo y navBar uno al lado del otro */
+  /* crear tarjetas de productos */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Courier Prime', monospace;
+    /*Funete importada*/
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    background-color: rgb(225, 227, 230);
 }
 header{
     display: flex;
@@ -17,6 +26,7 @@ header{
     width: 100%;
     align-items: center;
     padding: 15px 10px;
+    background: linear-gradient(90deg, rgba(255,137,58,1) 0%, rgba(245,21,57,1) 83%);
 }
 header img{
     height: 100px;
@@ -26,7 +36,11 @@ header img{
 header h1{
     font-size: 50px;
     letter-spacing: 3px;
-    color: rgb(49, 13, 209);
+    color: #ffffff00;
+    -webkit-text-stroke-width: 1.7px;
+    -webkit-text-stroke-color: rgb(202, 202, 202);
+    text-shadow: -4px 4px 4px rgba(255,137,58,1);
+    cursor:zoom-in;
 }
 
 section{
@@ -55,6 +69,7 @@ section .articleContainer img{
     height: 500px;
     padding: 10px;
     margin: auto;
+    border-radius: 5px;
 }
 section .articleContainer p{
     width: 400px;
@@ -65,13 +80,15 @@ section .articleContainer p{
 section .articleContainer .producto .button{
     width: 100px;
     padding: 20px;
-    border: 2px solid blue;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: none;
     margin-top: 50px;
     transition: 0.4s;
     text-align: center;
     text-decoration: none;
+    background-color: aliceblue;
+    border: none;
+    box-shadow: 0px 0px 1px rgb(117, 117, 117);
 }
 section .articleContainer .producto .button a{
     text-decoration: none;
@@ -80,6 +97,8 @@ section .articleContainer .producto .button a{
 section .articleContainer .producto .button:hover{
     border-radius: 50px;
     width: 200px;
+    box-shadow: 0px 0px 15px black;
+    cursor: pointer;
 }
 .lateralNav{
     width:10%;
@@ -92,7 +111,7 @@ section .articleContainer .producto .button:hover{
     list-style: none;
 }
 .lateralNav ul ul{
-    margin-left: 20px;
+    margin-left: 50px;
 }
 .lateralNav ul li{
     margin: 0px;
@@ -102,9 +121,11 @@ section .articleContainer .producto .button:hover{
 footer{
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
     margin: 20px auto 0;
     padding-bottom: 20px;
+    height: 200px;
+    background-color: #4a4a4a;
 }
 footer img{
     margin-left: 20px;
@@ -118,5 +139,5 @@ footer div{
 }
 footer div a{
     padding: 20px;
-
+    color: whitesmoke;
 }

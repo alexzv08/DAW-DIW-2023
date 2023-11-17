@@ -8,7 +8,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 50%;
+    margin-left: 40%;
 }
 /*Contenedor de cada boton e imagen, posicionando los elementos*/
 nav .nav_bar{
@@ -28,7 +28,7 @@ nav .nav_bar .content{
     color: var(--contrast-color);
 }
 nav .nav_bar .content:hover{
-    text-shadow: 2px 2px 0px  var(--second-color);
+    text-shadow: -2px 2px 0px  white;
     transition: 0.5s;
 }
 ul:first-child{
@@ -63,15 +63,16 @@ ul:first-child{
     justify-content:center;
 }
 .submenu li{
-    background-color:var(--second-color);
+    background-color:rgb(138, 13, 34);
+    text-shadow: none;
     color: #000;
 }
 .submenu li:nth-child(even){
-    background-color: var(--second-color);
+    background-color: rgb(185, 17, 45);
     color: #000;
 }
 .submenu li:hover{
-    background-color:  #f06529;
+    background-color:  var(--contrast-color);
     color: #000;
 }
 .submenu li a{
@@ -91,7 +92,7 @@ ul:first-child{
     width:1px;
     height:1px;
     border:5px solid transparent;
-    border-bottom-color:  #e34c26;
+    border-bottom-color: var(--second-color);
     left:50%;
     top:-10px;
     margin-left:-5px;
