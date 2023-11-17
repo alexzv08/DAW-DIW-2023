@@ -41,17 +41,14 @@ section .articleContainer{
 .containerProductos{
     display: flex;
     flex-direction: row;
+    width: 90%;
 }
 section .articleContainer .producto{
-    width: 500px;
-    height: 800px;
-
-    margin-left: 300px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
 }
 section .articleContainer img{
     width: auto;
@@ -65,15 +62,37 @@ section .articleContainer p{
     margin-top: auto;
     margin-left: 40px;
 }
+section .articleContainer .producto .button{
+    width: 100px;
+    padding: 20px;
+    border: 2px solid blue;
+    border-radius: 20px;
+    background-color: none;
+    margin-top: 50px;
+    transition: 0.4s;
+    text-align: center;
+    text-decoration: none;
+}
+section .articleContainer .producto .button a{
+    text-decoration: none;
+    color: black;
+}
+section .articleContainer .producto .button:hover{
+    border-radius: 50px;
+    width: 200px;
+}
 .lateralNav{
-    width:100%;
+    width:10%;
+    right: 0px;
 }
 .lateralNav ul{
-    width: 100%;
     display: flex;
     flex-direction: column;
     float: right;
-    justify-content: unset !important;
+    list-style: none;
+}
+.lateralNav ul ul{
+    margin-left: 20px;
 }
 .lateralNav ul li{
     margin: 0px;

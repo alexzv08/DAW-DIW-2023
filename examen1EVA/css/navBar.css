@@ -8,20 +8,15 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left:80%;
+    margin-left: 50%;
 }
 /*Contenedor de cada boton e imagen, posicionando los elementos*/
 nav .nav_bar{
-    margin: auto;
+    margin: 0px 20px;
     padding-top: 20px;
     height: 150px;
     display: flex;
     
-}
-/*Ajustando el tamaño y posicionanmiento de la imagen del nav*/
-nav .nav_bar img{
-    width: 50px;
-    margin: auto;
 }
 /*Dando los elementos de stilo a los botones del nav*/
 nav .nav_bar .content{
