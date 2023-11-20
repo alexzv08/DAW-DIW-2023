@@ -5,7 +5,9 @@
     --grey-color: #8d8d8d;
     --white-color: #ebebeb;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
 form{
+    font-family: 'Mukta', sans-serif;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -56,3 +58,19 @@ form button:hover{
     box-shadow: 0px 0px 15px black;
     cursor: pointer;
 }
+.tracking-in-expand {
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+  @keyframes tracking-in-expand {
+    0% {
+        opacity: 0;
+        letter-spacing: -0.5em;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

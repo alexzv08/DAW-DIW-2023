@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/tabla.css">
+    <script src="js/javaSc.js"></script>
     <title>ESPORNETS</title>
 </head>
 <body>
@@ -38,41 +39,23 @@
             </div>
         </nav>
     </header>
-    <section>
-        <section class="articleContainer">
-            <table>
-                <tr>
-                    <td>COD_PRODUCTO</td>
-                    <td>DESCRIPCIÓN</td>
-                    <td>TALLAS DISPONIBLES</td>
-                    <td>PVP</td>
-                </tr>
-                <tr>
-                    <td>ZM-120-RUN</td>
-                    <td>Zapatilla Hombre supinador </td>
-                    <td>34-42</td>
-                    <td>80€</td>
-                </tr>
-                <tr>
-                    <td>ZM-150-PRO</td>
-                    <td>Zapatilla Hombre pronador</td>
-                    <td>34-42</td>
-                    <td>150€</td>
-                </tr>
-                <tr>
-                    <td>ZM-120-SUP </td>
-                    <td>Zapatilla Hombre runner </td>
-                    <td>34-42</td>
-                    <td>150€</td>
-                </tr>
-                <tr>
-                    <td>ZM-120-PRO  </td>
-                    <td>Zapatilla Hombre profesional  </td>
-                    <td>34-42</td>
-                    <td>200€</td>
-                </tr>
-            </table>
-        </section>
+    <section class="sectionVideo">
+        <div class="reproductor">
+            <video width="1200px" autoplay controls>
+                <source src="espornets/Tu ritmo, tus zapatillas.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>
+        </div>
+        <div class="controlers">
+            <input type="button" id="reiniciar" value="reiniciar">
+            <input type="button" id="retrasar" value="&laquo;">
+            <input type="button" id="play" value="&#9658;">
+            <input type="button" id="adelantar" value="&raquo;">
+            <input type="button" id="silenciar" value="silenciar">
+            <label>Volumen</label>
+            <input type="button" id="menosVolumen" value="-">
+            <input type="button" id="masVolumen" value="+">
+        </div>
     </section>
     <footer>
         <img src="espornets/espornets.png" alt="logo de la Empresa">

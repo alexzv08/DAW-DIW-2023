@@ -1,17 +1,12 @@
 window.onload = function(){
-    colores = document.getElementsByClassName("selectColor");
-
-    colores[0].addEventListener("click",function(){
-        this.classList.toggle("active");
-
-    })
-    colores[1].addEventListener("click",function(){
-        this.classList.toggle("active");
-
-    })
-    colores[2].addEventListener("click",function(){
-        this.classList.toggle("active");
-
-    })
+    input = document.querySelectorAll("input");
+    input.forEach(element => {
+        element.addEventListener("mousedown",  function () {
+            this.style.boxShadow = "none"
+        });
+        element.addEventListener("mouseup",  function () {
+            this.style.boxShadow = "5px 5px 3px black"
+        });
+    });
   
 }

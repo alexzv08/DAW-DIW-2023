@@ -32,7 +32,22 @@ header img{
     height: 100px;
     width: 100px;
     margin-left: 20px;
+    animation: roll-in-left 1s ease-out both;
+    
 }
+  @keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+              transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
 header h1{
     font-size: 50px;
     letter-spacing: 3px;
@@ -41,8 +56,19 @@ header h1{
     -webkit-text-stroke-color: rgb(202, 202, 202);
     text-shadow: -4px 4px 4px rgba(255,137,58,1);
     cursor:zoom-in;
+    animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
-
+ @keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
 section{
     display: flex;
     flex-direction: row;
@@ -140,4 +166,40 @@ footer div{
 footer div a{
     padding: 20px;
     color: whitesmoke;
+}
+
+.sectionVideo{
+    background-image: none;
+    display: flex;
+    flex-direction: row;
+    
+}
+.reproductor{
+    margin: auto;
+}
+
+#progreso
+{
+    position: absolute;
+    width: 0px;
+    height: 16px;
+    background: rgba(0,0,150,.2);
+}
+
+.controlers{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 75%;
+    justify-content: space-between;
+}
+.controlers input {
+    height: 75px;
+    width: 75px;
+    border: none;
+    border-radius: 50%;
+    transition: 0.2s box-shadow;
+    box-shadow: 5px 5px 3px black;
+}
+.controlers input:hover{
 }
