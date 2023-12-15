@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr repeat(2, 1fr) 0.5fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px; 
+} 
+header { 
+    grid-area: 1 / 1 / 2 / 4;
+    border: 1px solid red; 
+    background-color: #fee4c6;
+}
+aside { 
+    grid-area: 2 / 1 / 4 / 2;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fee4c6;
+
+    & ul{
+        margin-top: 20px;
+        font-size: 20px;   
+    }
+    & ul li {
+        margin: 20px auto;
+    }
+}
+
+.textContainer { 
+    grid-area: 2 / 2 / 4 / 3;  
+    border: 1px solid red;
+    height: 400px;
+    background-color: #fee4c6;
+    & h1{
+        margin: 50px auto;
+    }
+    & p{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}
+.barra { 
+    grid-area: 2 / 3 / 3 / 4;
+    height: 100%;
+    border: 1px solid red;
+    background-color: #fee4c6;
+}
+.publi{
+    grid-area: 3 / 3 / 4 / 4;
+    height: 100%;
+    border: 1px solid red;
+    background-color: #fee4c6;
+}
+footer { 
+    grid-area: 4 / 1 / 5 / 4;
+    border: 1px solid red; 
+    background-color: #fee4c6;
+} 
+
+/* PANTALLA TABLET */
+@media (500px <= width <= 700px) {
+    body {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 0.5fr repeat(3, 1fr) 0.5fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        }
+        header { grid-area: 1 / 1 / 2 / 4; }
+        aside { grid-area: 2 / 1 / 3 / 4; }
+        .barra { grid-area: 3 / 1 / 5 / 2; }
+        .textContainer { grid-area: 3 / 2 / 5 / 4; }
+        .publi { grid-area: 5 / 1 / 6 / 2; }
+        footer { grid-area: 5 / 2 / 6 / 4; } 
+}
+
+/* //PANTALLA MOVIL */
+@media screen and (width < 500px) and  (orientation: portrait){
+    body {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.2fr 0.5fr 3fr repeat(3, 0.5fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        }
+        
+        header { grid-area: 1 / 1 / 2 / 1; width: 100%;}
+        aside { grid-area: 2 / 1 / 3 / 1; }
+        .textContainer { grid-area: 3 / 1 / 4 / 1;  height: 400px; }
+        .barra { grid-area: 4 / 1 / 5 / 1; }
+        .publi { grid-area: 5 / 1 / 6 / 1; }
+        footer { grid-area: 6 / 1 / 7 / 1; } 
+}
+
+
