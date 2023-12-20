@@ -160,6 +160,7 @@
         display: none;
     }
     .desplegable:hover + .body .header, .body .header:hover{
+        grid-area: 1 / 1 / 2 / 2;
         display: flex;
         flex-wrap: wrap;
         width: 100%;
