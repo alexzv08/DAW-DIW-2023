@@ -1,0 +1,34 @@
+$color1: #FF8000;
+$color2: #2E5F64;
+#primero{
+    .destacado{
+        color: $color1;
+        text-align: center;
+        padding: 6px;
+        font-size: 1.6em;
+    }
+
+}
+
+#segundo{
+    .destacado{
+        color: $color2;
+        padding: 5px;
+        font-size: 1.4em;
+        text-decoration: underline;
+    }
+    &:not(.destacado){
+        // font-style: italic;
+        p::first-line{
+            font-style: italic;
+        }
+    }
+    
+}
+
+div{
+    padding: 20px;
+    #parrafos{
+        text-align: right;
+    }
+}
