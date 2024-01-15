@@ -1,78 +1,112 @@
-$texto-color: #eee;
-$texto-color-hover: #fff;
-$background: #666;
-$background-hover:#888;
+$colorTexto: #eee;
+$colorSobre: #fff;
+$colorFondo: #666;
+$colorRaton: #888;
 
-@mixin transicion($x...){
-    transition: $propiety $duration $timing;
+@mixin textoFondo() {
+  color: $colorTexto;
+  background-color: $colorFondo;
+}
+@mixin textoFondoAlternativo() {
+  color: $colorSobre;
+  background-color: $colorRaton;
+}
+@mixin boxsizing($type) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+@mixin transition($property, $duration, $timing: linear) {
+  transition: $property $duration $timing;
+}
+@mixin transition2($name, $duration, $timing: linear) {
+  transition: $name, $duration, $timing;
 }
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+nav {
+  position: absolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 
-header{
-    background-color: white;
-    color: #242424;
-    width: 100%;
-    height: 50px;
-    font-size: 25px;
-    padding: 20px 50px;
-}
-
-nav{
-    width: 100%;
-    padding: 10px;
-    ul{
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        .categoria{
-            width: calc(100%/5);
-            padding: 20px 20px;
-            background-color: $background;
-            text-align: center;
-            a{  
-                text-decoration: none;
-                width: 100%;
-                color: $texto-color;
-            } 
-            .submenu{
-                position:absolute;
-                float:left;
-                margin:20px -20px;
-                padding:0;
-                display: flex;
-                flex-direction: column;
-                background-color: $background;
-                animation: infinite;
-
-                transition: 3s;
-                li{
-                    display: none;
-                    width: 380px;
-                    margin: auto;
-                    padding: 10px 0;
-
-                    a{
-                        text-align: center;
-                    }
-                } 
-                li:hover{
-                    background-color: $background-hover;
-                }
-            }
-        }
-        .categoria:hover{
-            
-            background-color: $background-hover;
-            .submenu {
-                li{
-                    display: block;
-                }
-            } 
-        } 
+  ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: auto;
+    .submenu {
+      position: absolute;
+      height: 0px;
+      overflow: hidden;
+      -moz-transition: height 0.5s ease-out;
+      -webkit-transition: height 0.5s ease-out;
+      transition: height 0.5s ease-out;
     }
+  }
+  & > ul {
+    width: 100%;
+    height: 32px;
+    color: $colorTexto;
+    background-color: $colorFondo;
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    color: $colorTexto;
+    background-color: $colorFondo;
+    text-decoration: none;
+    width: 160px;
+    padding: 7px 20px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      color: $colorSobre;
+      background-color: $colorRaton;
+      -moz-animation: iluminar 0.4s linear;
+      -webkit-animation: iluminar 0.4s linear;
+      animation: iluminar 0.4s linear;
+    }
+  }
+}
+li.categoria {
+  float: left;
+
+  & > a {
+    -moz-transition: padding 0.4s ease-out;
+    -webkit-transition: padding 0.4s ease-out;
+    transition: padding 0.4s ease-out;
+  }
+  &:hover > a {
+    padding: 10px 20px;
+  }
+  &:hover ul.submenu {
+    height: 100px;
+  }
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  padding: 12px 30px;
+  font-size: 1.8em;
+  color: #444;
+  background-color: $colorTexto;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+footer {
+  color: $colorTexto;
+  background-color: $colorFondo;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px;
 }

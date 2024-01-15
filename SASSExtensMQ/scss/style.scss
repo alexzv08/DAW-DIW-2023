@@ -1,0 +1,150 @@
+@import "mixin";
+
+$colorTexto:#eee;
+$colorFondo:#15a;
+$colorHover:lighten($colorTexto, 10%);
+$colorFondoHove:lighten($colorFondo, 10%);
+$colorTitulo:darken($colorFondo, 10%);
+
+$colorRaton:#888;
+
+
+nav {
+    position: absolute;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+
+
+        .submenu {
+            position: absolute;
+            height: 0px;
+            overflow: hidden;
+            -moz-transition: height 0.5s ease-out;
+            -webkit-transition: height 0.5s ease-out;
+            transition: height 0.5s ease-out;
+          }
+      }
+      &> ul {
+        width: 100%;
+        height: 32px;
+        color: $colorTexto;
+        background-color: $colorFondo;
+        display: flex;
+        justify-content: space-between;
+      }
+      a {
+        color: $colorTexto;
+        background-color: $colorFondo;
+        text-decoration: none;
+        width: 160px;
+        padding: 7px 20px;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            color: $colorHover;
+            background-color: $colorRaton;
+            -moz-animation: iluminar 0.4s linear;
+            -webkit-animation: iluminar 0.4s linear;
+            animation: iluminar 0.4s linear;
+          }
+      }
+
+  }
+  li.categoria {
+    float: left;
+    &> a {
+        -moz-transition: padding 0.4s ease-out;
+        -webkit-transition: padding 0.4s ease-out;
+        transition: padding 0.4s ease-out;
+      }
+      &:hover > a {
+        padding: 10px 20px;
+      }
+      &:hover ul.submenu {
+        height: 100px;
+      }
+  }
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  header {
+    padding: 12px 30px;
+    font-size: 1.8em;
+    color: #444;
+    background-color: $colorTexto;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  footer {
+    color: $colorTexto;
+    background-color: $colorFondo;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+  }
+
+
+  #contenido{
+    padding: 30px 20px;
+    .col-left{
+        box-sizing: border-box;
+        width: 30%;
+        float: left;
+        padding: 10px;
+
+        input{
+          @extend %input-block;
+          
+        } 
+        button{
+          @extend %button-block;
+          background-color: $colorFondo;
+          color: white;
+          :hover{
+            background-color: lighten($colorFondo, 10%);
+          }
+        }
+        @include responsive(max-width, 800px){
+          float: none;
+          width: 100%
+        }
+      }
+
+    .col-right{
+      box-sizing: border-box;
+      margin-left: 30%;
+      width: 70%;
+      padding: 10px;
+
+      h1{
+        color: $colorTitulo;
+        font-size:1.6em;
+      }
+      @include responsive(max-width, 800px){
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
+
+    @include responsive(max-width, 1024px){
+      padding: 10px 20px;
+    }
+  }
