@@ -34,7 +34,6 @@ nav{
             padding: 20px 20px;
             background-color: $background;
             text-align: center;
-            border: 1px solid red;
             a{  
                 text-decoration: none;
                 width: 100%;
@@ -48,8 +47,9 @@ nav{
                 display: flex;
                 flex-direction: column;
                 background-color: $background;
-                transition: 3s;
+                animation: infinite;
 
+                transition: 3s;
                 li{
                     display: none;
                     width: 380px;
@@ -66,6 +66,7 @@ nav{
             }
         }
         .categoria:hover{
+            
             background-color: $background-hover;
             .submenu {
                 li{
