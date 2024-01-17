@@ -1,0 +1,38 @@
+@import "mixin";
+// @import "menu";
+@import "screen";
+@import "contenido";
+
+$colorTexto:#eee;
+$colorFondo:#15a;
+$colorHover:lighten($colorTexto, 10%);
+$colorFondoHove:lighten($colorFondo, 10%);
+$colorTitulo:darken($colorFondo, 10%);
+$colorRaton:#888;
+
+body {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  header {
+    padding: 12px 30px;
+    font-size: 1.8em;
+    // color: #444;
+    // background-color: $colorTexto;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  footer {
+    color: $colorTexto;
+    background-color: $colorFondo;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+  }
