@@ -113,6 +113,8 @@ nav#mobile:hover ul a:hover {
   border-radius: 5px;
   border: 1px solid transparent;
   cursor: pointer;
+  background: #3686eb;
+  color: #eee;
 }
 #contenido .col-left input {
   box-sizing: border-box;
@@ -161,31 +163,31 @@ i {
 }
 
 .icon-menu {
-  background-image: url(../img/images/menu.png);
+  background-image: url("../img/images/menu.png");
   background-position: 0px 0px;
   height: 30px;
   width: 32px;
 }
 
 .icon-news {
-  background-image: url(../img/images/news.png);
-  background-position: 0px 0px;
+  background-image: url("../img/images/news.png");
+  background-position: 0px -90px;
   height: 30px;
-  width: 32px;
+  width: 39px;
 }
 
 .icon-money {
-  background-image: url(../img/images/money.png);
-  background-position: 0px 0px;
-  height: 30px;
-  width: 32px;
+  background-image: url("../img/images/money.png");
+  background-position: 0px -100px;
+  height: 50px;
+  width: 54px;
 }
 
 .icon-contact {
-  background-image: url(../img/images/contact.png);
+  background-image: url("../img/images/contact.png");
   background-position: 0px 0px;
   height: 30px;
-  width: 32px;
+  width: 30px;
 }
 
 @keyframes iluminar {

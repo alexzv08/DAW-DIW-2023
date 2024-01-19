@@ -1,6 +1,13 @@
 @import "mixin";
+@import "contenido";
+
+$iconos: ((menu, "../img/images/menu.png", 0px, 0px, 30px, 32px), (news, "../img/images/news.png", 0px, -90px, 30px, 39px), (money, "../img/images/money.png", 0px, -100px, 50px, 54px),
+(contact, "../img/images/contact.png", 0px, 0px, 30px, 30px));
+
 $icons: menu news money contact;
 $theme: light;
+
+
 
 $colorTexto:#eee;
 $colorFondo:#15a;
@@ -212,15 +219,22 @@ i {
     display: inline-block;
 }
 
-
-@each $icon in $icons {
-    .icon-#{$icon}{
-        background-image: url(../img/images/#{$icon}.png);
-        background-position: 0px 0px;
-        height: 30px;
-        width: 32px;
+@each $icono in $iconos{
+    .icon-#{nth($icono,1)}{
+            background-image: url(nth($icono,2));
+            background-position: nth($icono,3) nth($icono,4);
+            height: nth($icono,5);
+            width:nth($icono,6);
     }
 }
+// @each $icon in $icons {
+//     .icon-#{$icon}{
+//         background-image: url(../img/images/#{$icon}.png);
+//         background-position: 0px 0px;
+//         height: 30px;
+//         width: 32px;
+//     }
+// }
 
 // to do cambiar tamaños de las imagenes por listas con todos los datos
 
