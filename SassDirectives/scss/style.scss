@@ -23,6 +23,15 @@ body {
     font-weight: bold;
     text-shadow: 1px 1px 2px #aaa;
     font-family: Georgia, "Times New Roman", Times, serif;
+
+    @if $theme ==dark {
+      background: #138;
+    }
+
+    @else {
+        background: #ddf;
+        color: #138;
+    }
   }
   
   footer {
