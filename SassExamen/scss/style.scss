@@ -1,0 +1,288 @@
+// IMPORTAMOS EL ARCHIVO CON LAS FUNCIONES, MIXINGS Y LOS ELEMENTOS CON ATRIBUTOS PREDEFINIDOS DESDE OTRO DOCUMENTO, ESTO NOS PERMITE TENER MAS CLARIDAD EN EL CODIGO
+// Y PODER TENER MEJOR CLARIDAD VISUAL SOBRE LOS DISTINTOS DOCUMENTOS
+// Y PODER TENER UN ORDEN MEJOR ESTABLECIDO
+@import "principal";
+
+
+//DISTINTAS VARIABLES DONDE ALMACENAMOS CARACTERISTICAS DE ATRIBUTOS, DANDONOS LA CAPACIDAD DE PODER CAMBIAR TODOS LOS ATRIBUTOS DE LOS ELEMENTOS A LA VEZ
+$colorTexto:#eee;
+$colorFondo:#15a;
+$colorHover:lighten($colorTexto, 10%);
+$colorFondoHove:lighten($colorFondo, 10%);
+$colorTitulo:darken($colorFondo, 10%);
+$colorRaton:#888;
+
+
+// AQUI TENEMOS UN MAPA DE DISTINTOS MAPAS CON ATRIBUTOS, LO QUE NOS PERMITE HACER UN BUCLE Y CREAR DISTINTOS ELEMENTOS CON LOS ATRIBUTOS YA ESCOGIDOS, DANDONOS DINAMISMO Y AHORRANDONOS CODIGO
+$iconos: ((menu, "../img/images/menu.png", 0px, 0px, 30px, 32px), (news, "../img/images/news.png", 0px, -90px, 30px, 39px), (money, "../img/images/money.png", 0px, -100px, 50px, 54px),
+(contact, "../img/images/contact.png", 0px, 0px, 30px, 30px));
+
+$icons: menu news money contact;
+$theme: light;
+
+
+
+// EL NESTING DE LOS ELEMENTOS ESTA POR ORDEN DE ESTRUCTUARACION DEL HTML, AL IGUAL QUE LOS ELEMENTOS CON :HOVER,:SELECTED... ESTAN EN ORDEN CON SU ELEMENTO SELECIONADO,
+// Y DEJANDO LAS MODIFICACIONES DE MEDIA QUERY AL FINAL DE CADA BLOQUE PARA FACIL VISUALIZACION DE LOS DISITINTOS COMPONENTES
+// AL USAR EL NESTING TENEMOS MEJOR VISUAL DE LA ESTRUCTURA D ELOS ELEMENTOS
+body {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  header {
+    padding: 12px 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+    @if $theme ==dark {
+      background: #138;
+    }
+
+    @else {
+        background: #ddf;
+        color: #138;
+    }
+  }
+  
+
+nav#desktop {
+  position: absolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  ul {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+
+      &.submenu {
+          position: absolute;
+          height: 0px;
+          overflow: hidden;
+          
+          // LLAMAMOS AL MIXIN CON LOS VALORES SIN IMPORTAR EL ORDEN Y CREAMOS LA TRANSICION, AL LLAMAR A LAS VARIABLES DEL MIXING CON : NOS PERMITE NO PREOCUPARNOS DEL ORDEN
+          // ASI PODEMOS PONER TODOS LOS ATRIBUTOS SIN PREOCUPACION
+          @include transition($property:height, $duration:0.5s, $timing:ease-out);
+      }
+      &>ul {
+          width: 100%;
+          height: 32px;
+          color: #eee;
+          background-color: #138;
+      }
+
+      li a {
+          color: #eee;
+          background-color: #138;
+          text-decoration: none;
+          width: 160px;
+          padding: 7px 20px;
+          display: block;
+          text-align: center;
+          cursor: pointer;
+
+          &:hover {
+              color: white;
+              // LLAMAMOS A LA FUNCION "pasarAGris" PARA PASAR EL COLOR PASADO POR PARAMETRO A ESCALA DE GRISES, AL PODER USAR FUNCIONES NOS PERMITE TENER MAS DINAMISMO Y ORDEN EN EL CODIGO
+              // Y PODER HACER CAMBIOS MAS GENERALES DE FORMA RAPIDA Y UNIFORME
+              background-color: pasarAGris(#1744b5);
+              -moz-animation: iluminar 0.4s linear;
+              -webkit-animation: iluminar 0.4s linear;
+              animation: iluminar 0.4s linear;
+          }
+      }
+      li.categoria {
+          float: left;
+          
+          &>a {
+
+          // LLAMAMOS AL MIXIN CON LOS VALORES SIN IMPORTAR EL ORDEN Y CREAMOS LA TRANSICION, AL LLAMAR A LAS VARIABLES DEL MIXING CON : NOS PERMITE NO PREOCUPARNOS DEL ORDEN
+          // ASI PODEMOS LPONER TODOS LOS ATRIBUTOS SIN PREOCUPACION
+            @include transition($duration:0.4s ,$timing:ease-out ,$property:padding);
+          }
+
+          &:hover>a {
+              padding: 10px 20px;
+          }
+
+          &:hover ul.submenu {
+              height: 100px;
+          }
+      }
+  }
+
+  // AQUI LLAMAMOS AL MIXING QUE NOS PERMITE HACER LA QUERY MEDIA DE FORMA SENCILLA Y COMODA, YA CON PARAMETROS ESTABLECIDOS EN EL MIXING, 
+  // Y SOLO INCLUYENDO LOS NECESARIOS QUE SEAN PRIVADOS DEL ELEMENTO
+  @include responsive(max-width, "big"){
+      display: none;
+  }
+}
+
+
+nav#mobile {
+  display: none;
+  float: right;
+  
+  ul {
+      margin: 0px;
+      height: 0px;
+      overflow: hidden;
+      list-style-type: none;
+      position: absolute;
+      right: 10px;
+      top: 40px;
+  }
+  &:hover ul {
+      height: auto;
+
+      a {
+          color: #eee;
+          background-color: #138;
+          text-decoration: none;
+          width: 160px;
+          padding: 7px 20px;
+          display: block;
+          text-align: center;
+          cursor: pointer;
+          font-size: 0.6em;
+          font-weight: normal;
+          
+
+          &:hover {
+              color: white;
+              background-color:pasarAGris(#1744b5);;
+              -moz-animation: iluminar 0.4s linear;
+              -webkit-animation: iluminar 0.4s linear;
+              animation: iluminar 0.4s linear;
+          }
+      }
+  }
+  // AQUI LLAMAMOS AL MIXING QUE NOS PERMITE HACER LA QUERY MEDIA DE FORMA SENCILLA Y COMODA, YA CON PARAMETROS ESTABLECIDOS EN EL MIXING, 
+  // Y SOLO INCLUYENDO LOS NECESARIOS QUE SEAN PRIVADOS DEL ELEMENTO
+  @include responsive(max-width, "big"){
+      display: block;
+  }
+}
+
+#contenido {
+  padding: 30px 20px;
+
+
+  .col-left {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 30%;
+      float: left;
+      padding: 10px;
+
+      button {
+        //USAMOS EL PLACEHOLDER PARA DARLE UNOS ATRIBUTOS PREDEFINIDOS, AHORRANDONOS LINEAS EN EL DOCUMENTO Y TENER ELEMENTOS REUTILIZABLES
+        @extend %button-block;
+        //SI QUISIERAMOS CAMBIAR CUALQUIER ATRIBUTO PREDEFINIDO LO INDICAMOS DEBAJO DEL EXTENDS
+
+          @if $theme ==dark {
+              background: darken($colorFondo, 10%);
+              color: #eee;
+          }
+      
+          @else {
+              background: lighten($colorFondo, 20%);
+              color: #eee;
+          }
+      }
+      input {
+        //USAMOS EL PLACE HOLDER PARA DARLE UNOS ATRIBUTOS PREDEFINIDOS, AHORRANDONOS LINEAS EN EL DOCUMENTO Y TENER ELEMENTOS REUTILIZABLES
+        @extend %input-block;
+        //SI QUISIERAMOS CAMBIAR CUALQUIER ATRIBUTO PREDEFINIDO LO INDICAMOS DEBAJO DEL EXTENDS
+
+      }
+      //AQUI LLAMAMOS AL MIXING QUE NOS PERMITE HACER LA QUERY MEDIA DE FORMA SENCILLA Y COMODA
+      @include responsive(max-width, "small"){
+          float: none;
+          width: 100%;
+      }
+  }
+  .col-right {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-left: 30%;
+      width: 70%;
+      padding: 10px;
+
+      h1 {
+          color: #0b225b;
+          font-size: 1.6em;
+      }
+      //AQUI LLAMAMOS AL MIXING QUE NOS PERMITE HACER LA QUERY MEDIA DE FORMA SENCILLA Y COMODA
+      @include responsive(max-width, "small"){
+          margin-left: 0;
+          width: 100%;
+      }
+  }
+  .button-action {
+      background-color: #138;
+      color: white;
+  
+      &:hover {
+          background-color: #1c55e3;
+      }
+  }
+
+  @include responsive(max-width, "big"){
+      padding: 10px 20px;
+  }
+}
+
+i {
+  display: inline-block;
+}
+
+
+//AQUI GRACIAS A TENER UN MAPA CON DISTINTOS ATRIBUTOS PODEMOS CREAR UN BUCLE PARA AÑADIR ICONOS DENTRO DEL ELEMENTO ".icon" CON LOS DISTINTOS ATRIBUTOS 
+// PRESENTADOS EN EL MAPA, DE ESTA FORMA CREAMOS SENCILLEZ Y DINAMISMO AL DOCUMENTO
+
+@each $icono in $iconos{
+  .icon-#{nth($icono,1)}{
+    background-image: url(nth($icono,2));
+    background-position: nth($icono,3) nth($icono,4);
+    height: nth($icono,5);
+    width:nth($icono,6);
+  }
+}
+
+
+
+
+@keyframes iluminar {
+  from {
+    color: #eee;
+    background-color: #138;
+  }
+
+  to {
+    color: white;
+    background-color: #1744b5;
+  }
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+footer {
+  color: #eee;
+  background-color: #138;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px;
+}

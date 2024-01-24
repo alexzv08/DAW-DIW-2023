@@ -1,0 +1,68 @@
+@mixin textoFondo(){
+    color:$colorTexto;
+    background-color: $colorFondo;
+}
+@mixin textoFondoAlternativo(){
+    color: $colorSobre;
+    background-color: $colorRaton;
+}
+@mixin boxsizing ($type){
+-webkit-box-sizing: $type;
+-moz-box-sizing: $type;
+box-sizing: $type;
+}
+
+//FUNCION PARA PASAR A ESCALA DE GRISES, IDEPENDIENTEMENTE DE QUE COLOR LE PASES COMO PARAMETRO, UTILIZANDO FUNCIONES PODEMOS CAMBIAR LOS APRAMETROS DE FORMA RAPIDA
+@function pasarAGris($color){
+    @return grayscale($color);
+}
+
+
+// MIXING CON 3 VARIABLES, EN LA QUE SE PUEDEN INTRODUCIOR LOS VALORES SIN IMPORTAR EL ORDEN AL LLAMARLA, GRACIAS AL USAR MIXING, PODEMOS AHORRARNOS LINEAS DE CODIGO
+//YA QUE PODEMOS PASAR DISTINTOS VALORES POR PARAMETRO Y OTORGARLE AL ELEMENTO DIVERSOS ATRIBUTOS YA ESTABLECIDOS, PERO PASANDO LSO VALORES POR APRAMETRO AL LLAMAR AL MIXING
+@mixin transition ($property, $duration, $timing:linear){
+    transition: $property $duration $timing;
+
+}
+
+//MIXIN PARA REALIZAR LA QUERY MEDIA, PIDIENDO 2 VALORES COMO EL MAX/MIN-WIDTH Y EL TAMAÑO A COMPROBAR, EN ESTE CASO COMPROBAMOS SI EL PARAMETRO PASADO ES SMALL = 800PX
+// O BIG = 1024PX
+//DE ESTA FORMA PODEMOS HACER LA COMPARACION DE LAS MEDIA QUERY DE FORMA RAPIDA Y SENCILLA ESTABLECIENDO EL TAMAÑO EN EL MIXING Y PSANDO UNA PALABRA POR PARAMETRO, SIENDO MAS SENCILLO 
+//Y VISUAL
+@mixin responsive($comprueba, $aComprobar){
+    @if $aComprobar == "small"{
+        @media($comprueba: 800px){
+                @content;
+        }    
+    }@else if $aComprobar == "big"{
+        @media($comprueba: 1024px){
+            @content;
+        }
+    }@else{
+        @media($comprueba: 500px){
+            @content;
+        }
+    } 
+}
+
+
+// AQUI TENEMOS NUESTROS SELECTORES PLACEHOLDER, LOS CUALES LLAMAREMOS PARA PONER UNS ATRIBUTOS PREDEFINIDOS A NUESTOS BOTONES E IMPUTS,
+//Y EN CASO DE QUERER MODIFICAR ALGUN ATRIBUTO LO INDICAREMOS DEBAJO DE LA LLAMADA DEL PLACE HOLDER
+
+// AL CREAR PLACEHOLDERS PODEMOS CREAR DIVERSOS ELEMENTOS PREDEFINIDOS Y REUTILIZABLES DE FORMA COMODA
+%button-block{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+%input-block{
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #bbb;
+}
