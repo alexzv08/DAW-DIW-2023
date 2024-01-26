@@ -9,22 +9,67 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     </head>
     <style>
-        .col{
+        .header ,.footer {
+            height: 50px;
+            background-color: green;
+        }
+        .img-small{
+            background-color: blue;
             height: 80px;
-            background-color: rgb(196, 183, 196);
-            border: 1px solid rgba(0, 0, 0, 0.425);
+            text-align: center;
+
+        }
+
+        .header-main{
+            background-color: blueviolet;
+            height: 80px;
+        }
+
+        .bg-img{
+            height: 120px;
+            background-color: rgb(248, 219, 180);
+        }
+        .aside{
+            background-color: red;
         }
     </style>
     <body>
-        <div class="row">
-            <div class="col">1</div>
-            <div class="col">2</div>
-        </div>
-
-        <div class="row">
-            <div class="col">1</div>
-            <div class="col">2</div>
-            <div class="col">3</div>
-        </div>
+        <container>
+            <div class="row header">
+                <div class="col-md">header</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <div class="row h-100">
+                        <div class="aside m-1 col d-none d-sm-inline">Aside</div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9">
+                    <div class="row">
+                        <div class="header-main m-1 col-md ">Header main</div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-img m-1 col-md ">Big img</div>
+                        <div class="bg-img m-1 col-md ">Big img</div>
+                    </div>
+                    <div class="row ">
+                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
+                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
+                        <div class="img-small mx-auto  m-md-1 col-md-3 m-sm-3 col-sm-3 m-1">img</div>
+                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
+                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
+                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
+                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
+                        <div class="img-small mx-auto  m-md-1 col-md-3 m-sm-3 col-sm-3 m-1">img</div>
+                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
+                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer">
+                <div class="col-md">footer</div>
+            </div>
+        </container>
+    
     </body>
 </html>
