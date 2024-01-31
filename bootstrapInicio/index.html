@@ -9,65 +9,62 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     </head>
     <style>
-        .header ,.footer {
-            height: 50px;
-            background-color: green;
-        }
-        .img-small{
-            background-color: blue;
-            height: 80px;
+        div{
             text-align: center;
-
         }
-
-        .header-main{
-            background-color: blueviolet;
-            height: 80px;
+        .verde{
+            background-color: green;
+            height: 50px;
         }
-
-        .bg-img{
-            height: 120px;
-            background-color: rgb(248, 219, 180);
+        .azul{
+            background-color: cadetblue;
+            height: 50px;
         }
-        .aside{
-            background-color: red;
+        .azulclaro{
+            background-color: aqua;
+            height: 50px;
+        }
+        .naranja{
+            background-color: orange;
+            height: 50px;
+        }
+        .gris{
+            background-color: gray;
+            height: 50px;
         }
     </style>
     <body>
-        <container>
-            <div class="row header">
-                <div class="col-md">header</div>
+        <container class="container-fluid">
+            <div class="row">
+                <div class="m-1 col verde">HEADER</div>
+            </div>
+            <div class="row m-1">
+                <div class="mx-auto gy-1 col-5 col-sm-2 gy-sm-1 mz-md-none col-md-2 ml-md-4 azul">1</div>
+                <div class="mx-auto gy-1 col-5 col-sm-2 gy-sm-1 mz-md-none col-md-2 ml-md-4 azul">2</div>
+                <div class="mx-auto gy-2 col-5 col-sm-2 gy-sm-1 mz-md-none col-md-2   azul">3</div>
+                <div class="mx-auto gy-2 col-5 col-sm-2 gy-sm-1 mz-md-none col-md-2   azul">4</div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-3">
-                    <div class="row h-100">
-                        <div class="aside m-1 col d-none d-sm-inline">Aside</div>
-                    </div>
-                </div>
-                <div class="col-md-9 col-sm-9">
-                    <div class="row">
-                        <div class="header-main m-1 col-md ">Header main</div>
-                    </div>
-                    <div class="row">
-                        <div class="bg-img m-1 col-md ">Big img</div>
-                        <div class="bg-img m-1 col-md ">Big img</div>
-                    </div>
-                    <div class="row ">
-                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
-                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
-                        <div class="img-small mx-auto  m-md-1 col-md-3 m-sm-3 col-sm-3 m-1">img</div>
-                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
-                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
-                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
-                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
-                        <div class="img-small mx-auto  m-md-1 col-md-3 m-sm-3 col-sm-3 m-1">img</div>
-                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
-                        <div class="img-small mx-auto  m-md-1 col-md-2 m-sm-3 col-sm-3 m-1">img</div>
-                    </div>
-                </div>
+                <div class="m-1 d-none d-sm-inline d-md-none col azulclaro">TABLET</div>
             </div>
-            <div class="row footer">
-                <div class="col-md">footer</div>
+            <div class="row">
+                <div class="m-1 mx-auto gy-2 col-5 col-sm-2 gy-sm-0 gris">A</div>
+                <div class="m-1 mx-auto gy-2 col-5 col-sm-2 gy-sm-0 gris">B</div>
+                <div class="m-1 mx-auto gy-2 col-5 col-sm-2 gy-sm-0 gris">C</div>
+                <div class="m-1 mx-auto gy-2 col-5 col-sm-2 gy-sm-0 gris">D</div>
+            </div>
+            <div class="row">
+                <div class="m-1 d-none d-md-inline col azulclaro">DESKOPT</div>
+            </div>
+            <div class="row">
+                <div class="m-1 d-sm-none col azulclaro">MOBILE</div>
+            </div>
+            <div class="row">
+                <div class="mx-auto d-none d-sm-inline col-sm-5 naranja">:(</div>
+                <div class="mx-auto col-12 col-sm-5 naranja">:D</div>
+            </div>
+            <div class="footer d-none d-sm-inline">
+                <div class="verde m-1 col">FOOTER</div>
             </div>
         </container>
     
