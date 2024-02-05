@@ -9,68 +9,54 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     </head>
     <style>
-        div{
-            text-align: center;
-        }
-        .verde{
+        .header{
+            border: 1px solid black;
             background-color: green;
-            height: 50px;
         }
-        .azul{
-            background-color: cadetblue;
-            height: 50px;
+        .columna1,.columna2,.columna3{
+            border: 1px solid black;
+            background-color: red;
+            height: 300px;
         }
-        .azulclaro{
-            background-color: aqua;
-            height: 50px;
+        .yellow{
+            border: 1px solid black;
+            background-color: yellow;
+            height: 100px;
         }
-        .naranja{
-            background-color: orange;
-            height: 50px;
-            
+        @media(width <768px){
+            .header{
+                background-color: aqua;
+            }
+            .columna3{
+                background-color: greenyellow;
+            }
+
         }
-        .gris{
-            background-color: gray;
-            height: 50px;
+        @media(width <576px){
+            .header{
+                background-color: orange;
+            }
+            .columna2{
+                background-color: aqua;
+            }
+            .columna3{
+                background-color: red;
+            }
         }
     </style>
     <body>
         <container class="container-fluid">
-            <div class="row">
-                <div class="m-1 col verde">HEADER</div>
+            <div class="row p-2">
+                <div class="header p-4 m-2 col text-left">HEADER</div>
             </div>
-
-
-            <div class="row m-1">
-                <div class="azul m-sx-1 mt-2 col-md-2 offset-md-4 col-sm-3 col-6">1</div>
-                <div class="azul m-sx-1 mt-2 col-md-2 col-sm-3 col">2</div>
- 
-                <div class="w-100 d-md-block d-sm-none"></div>
-                <div class="azul m-sx-1 col-md-2 mt-2 col-sm col-6">3</div>
-                <div class="azul m-sx-1 col-md-2 mt-2 offset-md-8 col-sm col">4</div>
+            <div class="row p-4">
+                <div class="columna1 mt-2 ms-2 me-2 p-2 col-md col-sm    col-xs-11 m-xs-4 text-md-center text-sm-start text-start">1</div>
+                <div class="columna2 mt-2 ms-2 me-2 p-2 col-md col-sm    col-xs-11 m-xs-4 text-md-center text-sm-end text-center">2</div>
+                <div class="columna3 mt-2 ms-2 me-2 p-2 col-md col-sm-12 col-xs-11 m-xs-4 text-md-center text-end">3</div>
             </div>
-
-            <div class="row">
-                <div class="m-1 d-none d-sm-inline d-md-none col azulclaro">TABLET</div>
-            </div>
-            <div class="row m-1">
-                <div class="m-1 mx-auto gy-2 col-5 col-sm-2 gy-sm-0 order-md-4 gris">A</div>
-                <div class="m-1 mx-auto gy-2 col-5 col-sm-2 gy-sm-0 order-md-3 gris">B</div>
-                <div class="m-1 mx-auto gy-2 col-5 col-sm-2 gy-sm-0 order-md-2 gris">C</div>
-                <div class="m-1 mx-auto gy-2 col-5 col-sm-2 gy-sm-0 order-md-1 gris">D</div>
-            </div>
-            <div class="row m-1">
-                <div class="m-1 d-none d-md-inline col azulclaro">DESKOPT</div>
-            </div>
-            <div class="row m-1">
-                <div class="m-1 d-sm-none col azulclaro">MOBILE</div>
-            </div>
-            <div class="row m-1">
-                <div class="d-none d-sm-inline col-sm-5 offset-md-3 col-md-3 naranja">:(</div>
-                <div class="col-12 col-sm-5 col-md-3 naranja">:D</div>
-            </div>
-            <div class="footer d-none d-sm-inline">
-                <div class="verde m-1 col">FOOTER</div>
+            <div class="row p-4">
+                <div class="yellow p-4 m-2 col-md col-sm-12 text-md-end   text-center">footer 1</div>
+                <div class="yellow p-4 m-2 col-md col-sm-12 text-md-start text-center">footer 2</div>
             </div>
         </container>
     
